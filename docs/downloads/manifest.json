@@ -1,11 +1,13 @@
 {
   "version": "2026-09-19",
+  "kitVersion": "1.2.0",
+  "release": "downloads/releases/1.2.0/9c4efcee8b26/AI-NORIKO-Starter-Kit.zip",
   "assets": [
     {
       "name": "AI-NORIKO-Starter-Kit.zip",
       "path": "downloads/AI-NORIKO-Starter-Kit.zip",
-      "bytes": 3320991,
-      "sha256": "ecd841e687d43089d612bf3915a5ec59b2007999960720cb07a58da2b54cc048"
+      "bytes": 3341374,
+      "sha256": "9c4efcee8b269e4ab8f90c7226d9686839b89b0f6517bd91938e459f8ba07d73"
     },
     {
       "name": "AI-NORIKO-Lecture-Slides.pptx",
@@ -16,26 +18,26 @@
     {
       "name": "AI-NORIKO-Learning-Guide.zip",
       "path": "downloads/AI-NORIKO-Learning-Guide.zip",
-      "bytes": 56776,
-      "sha256": "10f567ebbd238879b4baacc35a1d28aa824c4c5d6f72666d13b092be66cb159e"
+      "bytes": 66363,
+      "sha256": "5958ea1c230040bed89890c06a9f57c6d1773795c8fcd8ab71149646d5e07220"
     },
     {
       "name": "AI-NORIKO-Copy-Paste-Prompts.txt",
       "path": "downloads/AI-NORIKO-Copy-Paste-Prompts.txt",
-      "bytes": 21020,
-      "sha256": "8eb5d9e7a8ec391ff9ba0626ef7ae21ddf3c9377e3dfb17e542ee778523f15be"
+      "bytes": 23259,
+      "sha256": "27fdddb36d9d1589117463e7ac8b00795171d6252fc84dc62ca967ca73a398ea"
     },
     {
       "name": "AI-NORIKO-Course-Guide.md",
       "path": "downloads/guide/docs/COURSE_GUIDE.md",
-      "bytes": 11099,
-      "sha256": "e2f9bb9c2af118a3b1848a34dbb73c3a1da986afd0ca620a5604e7cc6a75e2a2"
+      "bytes": 12750,
+      "sha256": "fa107bd9a491875500ea8e3d3d27509808e18b9bd6ccaab4e1defdeea867f05e"
     },
     {
       "name": "AI-NORIKO-Knowledge-Setup.md",
       "path": "downloads/guide/docs/NORIKO_KNOWLEDGE_SETUP.md",
-      "bytes": 11234,
-      "sha256": "5f27331eff61805bf7bf8b56a6a8c15eb02f74b50af4fa08897da1bd082fd64e"
+      "bytes": 11994,
+      "sha256": "87eab76d6fd6a955b8c7c43a3ce423d724aabf43958c89e62a041e8ee3619a8e"
     },
     {
       "name": "AI-NORIKO-Personal-Playbook.md",
@@ -56,16 +58,22 @@
       "sha256": "9a463b340f9e0ceb8d424047feec40ecc558402e9b6116218c5566ea1c5f846a"
     },
     {
+      "name": "AI-NORIKO-Multiple-Installs.md",
+      "path": "downloads/guide/docs/MULTIPLE_INSTALLS.md",
+      "bytes": 6428,
+      "sha256": "584e07e67f120c001fc2b2840c340abd1e8ac7367821777ea5bc80d3916caa17"
+    },
+    {
       "name": "AI-NORIKO-Windows-Setup.cmd",
       "path": "downloads/AI-NORIKO-Windows-Setup.cmd",
-      "bytes": 8249,
-      "sha256": "96ed372098a5aab7c573ac2b4db036c4c87402c92cf7869258c86fc7b41bf393"
+      "bytes": 8277,
+      "sha256": "b220842310e845bc3ce540438be73e4f4e69ef01153cd041be9a7d9d2f1023fa"
     },
     {
       "name": "AI-NORIKO-Windows-Help.md",
       "path": "downloads/AI-NORIKO-Windows-Help.md",
-      "bytes": 1940,
-      "sha256": "33774a48f22b03b5d99d4113259d7c018b620ff9737e64c3cbd52761bf08bc86"
+      "bytes": 3019,
+      "sha256": "90977d0fda060753769ca8736e01c84ee45ddffa993454dc284404fb48c4261f"
     }
   ]
 }

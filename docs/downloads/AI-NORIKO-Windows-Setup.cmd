@@ -88,10 +88,10 @@ function Start-NorikoDownload {
         $stage = 'ダウンロード'
         Write-Host '[1/3] キットをダウンロードしています。'
         [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-        Invoke-WebRequest -UseBasicParsing -Uri 'https://ahaha48.github.io/ai-noriko-class/downloads/AI-NORIKO-Starter-Kit.zip' -OutFile $zipPath -TimeoutSec 120
+        Invoke-WebRequest -UseBasicParsing -Uri 'https://ahaha48.github.io/ai-noriko-class/downloads/releases/1.2.0/9c4efcee8b26/AI-NORIKO-Starter-Kit.zip' -OutFile $zipPath -TimeoutSec 120
         $stage = '照合・展開'
         Write-Host '[2/3] ファイルを照合し、安全な新規フォルダに展開しています。'
-        Expand-NorikoArchive -ArchivePath $zipPath -DestinationPath $extractPath -ExpectedHash 'ecd841e687d43089d612bf3915a5ec59b2007999960720cb07a58da2b54cc048'
+        Expand-NorikoArchive -ArchivePath $zipPath -DestinationPath $extractPath -ExpectedHash '9c4efcee8b269e4ab8f90c7226d9686839b89b0f6517bd91938e459f8ba07d73'
         $kitPath = Join-Path $extractPath 'AI-NORIKO-Starter-Kit'
         $stage = '次の手順の保存'
         [IO.File]::WriteAllText((Join-Path $runPath 'NEXT-STEPS.txt'), "Codexで開くフォルダ：`r`n$kitPath`r`n`r`nそのプロジェクトのチャットへP01を送ります。`r`nhttps://ahaha48.github.io/ai-noriko-class/#P01`r`n", (New-Object Text.UTF8Encoding($true)))

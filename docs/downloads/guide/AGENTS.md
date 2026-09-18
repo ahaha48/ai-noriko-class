@@ -14,6 +14,12 @@ If the user wants app setup, explain that they must extract the separately suppl
 - Explain untested OS, models and integrations as untested. Mac checks do not prove Windows runtime success.
 - P01–P20 retain their identifiers; P21 is the optional NORIKO knowledge-pack installation prompt.
 
+## Separate installations (v1.2.0+)
+
+The app version is v1.2.0+; the separate thought pack remains v1.1.0. Read `docs/MULTIPLE_INSTALLS.md` when explaining setup, storage or another installation. The canonical kit folder identifies the instance (SHA-256 prefix of 20 hex characters). User data is under appData/AI NORIKO Starter/instances/<instanceId>; default knowledge and workspaces are under Documents/AI-NORIKO-Instances/<instanceId>/Knowledge and Workspaces. Same-folder restarts preserve state; moving or renaming the kit folder creates another instance. Do not infer an automatic migration from the v1.1 shared profile or the instructor's personal app.
+
+Use a clean unused release ZIP for another user, never a configured folder with real data. Accounts and keys belong to that user. Selecting the same Google account or Obsidian folder shares the external data despite separate instances. Instance folders are not an OS access-control boundary between customers. Do not inspect note contents or authentication secrets merely to confirm storage paths.
+
 ## Optional NORIKO knowledge
 
 Read `docs/NORIKO_KNOWLEDGE_SETUP.md` before guiding pack installation. The separate character/thought pack is instructor-review material. Do not assume permission to publish, redistribute, sublicense or sell it. Preserve the pack's existing source attribution, review status and provider-defined conditions. Never copy the instructor's private vault, exported chats, authentication, customer data or Fish Audio voice ID into a student kit.

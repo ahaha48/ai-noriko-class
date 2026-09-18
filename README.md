@@ -10,8 +10,12 @@ Windows向けに、ZIPのダウンロード・SHA-256照合・安全な新規フ
 
 ## 更新する方へ
 
-講義の元プロジェクトとLearning-Guideを同じ親フォルダに置き、元プロジェクトの依存を準備した状態で `node scripts/export.mjs` を実行します。出力先は `docs` です。既存のSitesサイトや個人アプリは変更しません。
+講義の元プロジェクト、AI-NORIKO-Starter-Kit、AI-NORIKO-Learning-Guideを同じ親フォルダに置き、元プロジェクトの依存を準備します。キット本体・資料・プロンプトの検証と同期が済んだら、`python3 scripts/package-downloads.py`、`node scripts/export.mjs` の順に実行します。出力先は `docs` です。既存のSitesサイトや個人アプリは変更しません。
+
+キットv1.2.0は実際の本体フォルダのパスから環境IDを作り、ローカル保存先とElectronセッションを環境別に分けます。保存先の説明は `docs/downloads/guide/docs/MULTIPLE_INSTALLS.md` を参照してください。移動・改名後の自動移行や、同じ外部アカウントのデータ分離は行いません。
+
+パッケージ処理は許可したソースと教材のみを収録し、CRC・秘密情報パターンを検査します。`kit-files.json` は全ファイルのサイズとSHA-256、`release.json` は版番号と不変の配布URLを記録します。講義スライドは9月18日版を維持し、複数導入と保存先は最新版ガイドを優先する旨をページに明記しています。
 
 公開前にコピー操作・教材リンク・スマホ表示と、公開対象に秘密情報がないことを確認してください。実アカウントの接続や個人情報は公開用フォルダへ入れません。
 
-Windows補助ファイルは `scripts/windows-setup.cmd.in` から生成します。export時にキットZIPのSHA-256を埋め込むため、ZIP更新時は補助ファイルも必ず再生成します。Windowsの自動テストは `.github/workflows/windows-setup-test.yml`、ページの確認は `scripts/verify.mjs`。自動テストでは `AI_NORIKO_SETUP_NONINTERACTIVE=1` で最後のExplorer表示と一時停止だけを省略し、取得・照合・展開処理は同じものを使います。
+Windows補助ファイルは `scripts/windows-setup.cmd.in` から生成します。export時にキットZIPのSHA-256と版ごとの不変URLを埋め込むため、ZIP更新時は補助ファイルも必ず再生成します。Windowsの自動テストは `.github/workflows/windows-setup-test.yml`、ページの確認は `scripts/verify.mjs`。公開前はコミット済みZIPをローカルHTTPで配信し、公開後はworkflow_dispatchのlive検証で実URLを確認します。自動テストでは `AI_NORIKO_SETUP_NONINTERACTIVE=1` で最後のExplorer表示と一時停止だけを省略し、取得・照合・展開処理は同じものを使います。

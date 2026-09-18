@@ -22,6 +22,8 @@ try {
     assert.equal((await page.goto(base)).status(), 200);
     assert.equal(await page.locator('.resource-prompt').count(), 21);
     assert.equal(await page.locator('#windows-setup').count(), 1);
+    assert.equal(await page.locator('#multiple-installs').count(), 1);
+    assert.ok((await page.locator('body').textContent()).includes('v1.2.0'));
     assert.equal(await page.locator('#windows-setup a[href$="AI-NORIKO-Windows-Setup.cmd"]').count(), 1);
     assert.equal(await page.locator('#P01').getAttribute('open'), '');
     for (const prompt of expected) assert.equal(await page.locator(`#${prompt.id} pre code`).textContent(), prompt.text);
@@ -41,6 +43,9 @@ try {
         assert.equal(response.status(), 200, asset.path);
         assert.equal(crypto.createHash('sha256').update(await response.body()).digest('hex'), asset.sha256, asset.path);
       }
+      const releaseResponse = await context.request.get(new URL(manifest.release, base).href);
+      assert.equal(releaseResponse.status(), 200);
+      assert.equal(crypto.createHash('sha256').update(await releaseResponse.body()).digest('hex'), manifest.assets.find(asset => asset.name === 'AI-NORIKO-Starter-Kit.zip').sha256);
       const alias = new URL('resources/', base).href;
       assert.equal((await page.goto(alias)).status(), 200);
       assert.equal(await page.locator('.resource-prompt').count(), 21);

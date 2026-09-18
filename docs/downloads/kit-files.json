@@ -1,0 +1,310 @@
+{
+  "version": "1.2.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 137,
+      "sha256": "fb3e5b4e0fb03fd46a9b52aca2a848d61b0497d0ca3786f6a2286d585e30e5b2"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 5022,
+      "sha256": "76bf93b4e97bf302f7b60290d235adf6a4d7db4bde8faab4f2a33d3302cc4263"
+    },
+    {
+      "path": "CODEX_SETUP_PROMPT.md",
+      "bytes": 3219,
+      "sha256": "2cb47fb9f6c92af2dd4a60233b9129f67838541cf2fadf043323a5ed568006ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4620,
+      "sha256": "27aa4ed33ff9d0772ce4a44e4ad35b8eb33e6617b9b611465dbfe7101573d641"
+    },
+    {
+      "path": "START-MAC.command",
+      "bytes": 412,
+      "sha256": "2cfdb7c824d03a85aef6cd4a5d489a16f2d03e50ee523512b0edd21f69ad8a95"
+    },
+    {
+      "path": "START-WINDOWS.bat",
+      "bytes": 618,
+      "sha256": "3d58f71176519c95b0df01eff55dea318ffc4b89b6b5af9f3dbf4c5bda779f05"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 4656,
+      "sha256": "46d0b193439ff1db294cec217bedab418304ff0813af0ef77c3594011fe9be94"
+    },
+    {
+      "path": "course/prompts.json",
+      "bytes": 24410,
+      "sha256": "672e7683a41e2ba052d1b4c14c15feb1d28a1020f27f81714f9950e5987b11c5"
+    },
+    {
+      "path": "docs/BRAND_NAME.md",
+      "bytes": 1026,
+      "sha256": "f0eee19ea02cb36eb06b774d9a2f1a21af5bf6d5b6b334c35dee7ae62a46fa34"
+    },
+    {
+      "path": "docs/COURSE_GUIDE.md",
+      "bytes": 12750,
+      "sha256": "fa107bd9a491875500ea8e3d3d27509808e18b9bd6ccaab4e1defdeea867f05e"
+    },
+    {
+      "path": "docs/CUSTOMIZATION.md",
+      "bytes": 3785,
+      "sha256": "8add8eb358f3a8236dbac190ae6ef2ee97e7e4e4655b48335974548f8f2bfd5b"
+    },
+    {
+      "path": "docs/FEATURE_CATALOG.md",
+      "bytes": 4433,
+      "sha256": "96993fb9f39fd77f185517554ac16fba3b49003faa8706ee31f58816aa536c3d"
+    },
+    {
+      "path": "docs/INSTRUCTOR_GUIDE.md",
+      "bytes": 5381,
+      "sha256": "d551229fff39d0291df36dbc508d2bc37d48f3d7c6b610aacce1c7afc714cec6"
+    },
+    {
+      "path": "docs/MAC_SETUP.md",
+      "bytes": 3260,
+      "sha256": "e7298dd9a8784117fbab5bb9f1fd8f6730e70765a6d02dcba671751de321b74f"
+    },
+    {
+      "path": "docs/MULTIPLE_INSTALLS.md",
+      "bytes": 6428,
+      "sha256": "584e07e67f120c001fc2b2840c340abd1e8ac7367821777ea5bc80d3916caa17"
+    },
+    {
+      "path": "docs/NORIKO_KNOWLEDGE_SETUP.md",
+      "bytes": 11994,
+      "sha256": "87eab76d6fd6a955b8c7c43a3ce423d724aabf43958c89e62a041e8ee3619a8e"
+    },
+    {
+      "path": "docs/PERSONAL_PLAYBOOK.md",
+      "bytes": 4084,
+      "sha256": "d25746ec2dc7af9354c19d1a15a204e40708e818389adc519a0753d150c48e8b"
+    },
+    {
+      "path": "docs/PROMPTS.md",
+      "bytes": 23259,
+      "sha256": "27fdddb36d9d1589117463e7ac8b00795171d6252fc84dc62ca967ca73a398ea"
+    },
+    {
+      "path": "docs/REVISION_20260909.md",
+      "bytes": 1646,
+      "sha256": "e64b0cbf516a9581abd0e35f317fffa629e223ed1412d77d8ef33c1091b02db8"
+    },
+    {
+      "path": "docs/REVISION_20260918.md",
+      "bytes": 2440,
+      "sha256": "a86c456096a1aa7a70c9bdde79e3e73afaf2d84a4889dbf3025c9c5dc1ed83a1"
+    },
+    {
+      "path": "docs/REVISION_20260919.md",
+      "bytes": 1554,
+      "sha256": "27726e2c68ce22dbc8d9999681afe38c7d23ecaee55092488f42d56e5bb803c9"
+    },
+    {
+      "path": "docs/SERVICE_DESIGN.md",
+      "bytes": 5888,
+      "sha256": "9a463b340f9e0ceb8d424047feec40ecc558402e9b6116218c5566ea1c5f846a"
+    },
+    {
+      "path": "docs/TEAM_PLAYBOOK.md",
+      "bytes": 5062,
+      "sha256": "c0e9b8c61591314519d36ff4c7c42fc3181758ae4ff3f25e33cfa243ca19068d"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "bytes": 5430,
+      "sha256": "4098b7c9d2f2c47425ce636f2e4da123eb3d57ddfe7fe66e5e80cdda65209106"
+    },
+    {
+      "path": "docs/WINDOWS_SETUP.md",
+      "bytes": 4021,
+      "sha256": "114f2c063944f5c58cd2933eaac40f5c43a5279c48758d4030fe39322914d89a"
+    },
+    {
+      "path": "electron/instance-profile.cjs",
+      "bytes": 1454,
+      "sha256": "cb4aab7d2c5ead70866ca54c154f0ad58b5fcf25c73829b44e40978297e2c5c3"
+    },
+    {
+      "path": "electron/main.cjs",
+      "bytes": 106297,
+      "sha256": "2ab28c43a7433280879a4ebbd949c06e41be5784d499551081ef9b3403b78aaf"
+    },
+    {
+      "path": "electron/preload.cjs",
+      "bytes": 3869,
+      "sha256": "75b497bfcf4d367fcfe4c5519d666e64711c5a22abcaacc021bdc23d0ee0d9de"
+    },
+    {
+      "path": "examples/revenue.csv",
+      "bytes": 161,
+      "sha256": "3d9e65544be7978ba26fa1e44ad0c937a514ea5f994c5455eba3268314bdcfbc"
+    },
+    {
+      "path": "index.html",
+      "bytes": 743,
+      "sha256": "5a7ab5748075cf42dee71ad97f8224219b17fe16e36f195cee209db92dd42ed8"
+    },
+    {
+      "path": "models/README.md",
+      "bytes": 262,
+      "sha256": "929a1e27496c2a1faeda9c3551d45ca35b75536a72e02a014aef9ab93c382504"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 46281,
+      "sha256": "f1433072a8211b94c48dda53cf879d20c80a420e3c252fca807bff043ae9c53e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 999,
+      "sha256": "82532b2572e97c0f0091b6711192121ad73be707a2c24a23b1d32548c629effd"
+    },
+    {
+      "path": "public/assets/noriko-character-closed.png",
+      "bytes": 1577816,
+      "sha256": "39eedf94796ab4ce7a29c8725367d6d9f862eb788f4c0d060418305d55d4afcd"
+    },
+    {
+      "path": "public/assets/noriko-character-open.png",
+      "bytes": 1560768,
+      "sha256": "ccead291400d7191027684bffdbf9ba96106684008912c3abdda1c520b56285e"
+    },
+    {
+      "path": "scripts/backend-safety.test.mjs",
+      "bytes": 18751,
+      "sha256": "9904ddc4c476e14a2ed2b580629e98659bb8ff1cf1b5ad49c165fff701afedc1"
+    },
+    {
+      "path": "scripts/brand.test.mjs",
+      "bytes": 5120,
+      "sha256": "a3951f6dd6b53fd62b9f5f9563940a8fcf19ce942a05e1f30ac73b2763c7430c"
+    },
+    {
+      "path": "scripts/command-intent.test.mjs",
+      "bytes": 2279,
+      "sha256": "ad05328f65ba0e6d594f46824aa48024662ef0d7c117358d15ec4f63b7c404c0"
+    },
+    {
+      "path": "scripts/dev.mjs",
+      "bytes": 1025,
+      "sha256": "ea7e6a1273682d0eb4cce3084222d77f51ddaa6b84cb59bae4074c19930234e9"
+    },
+    {
+      "path": "scripts/doctor.mjs",
+      "bytes": 2900,
+      "sha256": "37ef5206dee8dd3ea45353a3650571254594cdf3aaadd6b7c3d9a176a036696e"
+    },
+    {
+      "path": "scripts/instance-electron.ui.mjs",
+      "bytes": 7149,
+      "sha256": "c79343b8224a1e804d44e6cba3016ef269b5be99788d44c9df636c0cf9b21af7"
+    },
+    {
+      "path": "scripts/instance-profile.test.mjs",
+      "bytes": 11195,
+      "sha256": "20510c30cabf1411f9342ef13a27454019739f2362389a69492edea3eb446dd5"
+    },
+    {
+      "path": "scripts/runtime-support.mjs",
+      "bytes": 699,
+      "sha256": "99e757371f67a83f2ec66aa2d923dbb78e6e478b853f2785dd5f895eedaa91e3"
+    },
+    {
+      "path": "scripts/setup.mjs",
+      "bytes": 680,
+      "sha256": "d357139cb654b81f7e623c162b8a4cb6b106194819a599630a6fd46a041b4af5"
+    },
+    {
+      "path": "scripts/setup.test.mjs",
+      "bytes": 994,
+      "sha256": "c2dde4e2fb86e6cbe0d05518fe59287b2487b3184d15bae5073096391b0efa61"
+    },
+    {
+      "path": "scripts/smoke.mjs",
+      "bytes": 1907,
+      "sha256": "37726f0d24922680a0e3edad511c4e170b930476c6046fc3b4862cef3970df26"
+    },
+    {
+      "path": "scripts/starter-ui.ui.mjs",
+      "bytes": 18771,
+      "sha256": "2dc07184a315a711169a6b207cc9890cbc132c82ac0f2c8c2669e20cd157b55f"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 176242,
+      "sha256": "82b75059a55f701d1aa64b2248d1842dad25338e531cc3dfc27a388ee9f8a827"
+    },
+    {
+      "path": "src/command-intent.ts",
+      "bytes": 1606,
+      "sha256": "d7ce97aed6bc9b4f36537b1d715a645bb67ae3f1dccba3a65eee112bac26782d"
+    },
+    {
+      "path": "src/electron.d.ts",
+      "bytes": 5418,
+      "sha256": "d30b2a5cbfe5dd39d1c5f8b3f187b14ff4cb7ec883e980479ff9ec17d587c6c9"
+    },
+    {
+      "path": "src/lib.ts",
+      "bytes": 5597,
+      "sha256": "10ee09bc44d769e86c4e684a39ac868cf3764d2fa3056b2a46f7d55aa919be27"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 238,
+      "sha256": "41431cb94a112ca05f90ca6037229d09d4bb8ecc1c27ae3bb3740ace8f01d2a6"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 57856,
+      "sha256": "fead8b8b0ab1bc78a789c2080d754b98751c8e6b8c05f75367c32d209256c2fe"
+    },
+    {
+      "path": "src/types.ts",
+      "bytes": 6328,
+      "sha256": "ed4718742cd853319318ed3b9ed0f0b32e3c887823074cfd84412320bef09a98"
+    },
+    {
+      "path": "templates/README.md",
+      "bytes": 587,
+      "sha256": "364eb44c94471ced87a38f2ae7f632289e97a7eb6c1f7f705e184c4df31f12e4"
+    },
+    {
+      "path": "templates/判断基準テンプレート.md",
+      "bytes": 479,
+      "sha256": "8f892e4d9874902aeb08984044ad502ee9b8e8fb0e1a95c73a5a2f2ff7131721"
+    },
+    {
+      "path": "templates/導入チェックシート.md",
+      "bytes": 772,
+      "sha256": "f651f8cbf731f44e3b8f5907b102092fb15aa3be7498bd49fac0c412201e1891"
+    },
+    {
+      "path": "templates/検証記録テンプレート.md",
+      "bytes": 783,
+      "sha256": "aa2b434d7f1d4a1c701b910e3dc9a03eff9996748551b1249cf37e610ee91e37"
+    },
+    {
+      "path": "templates/社長確認用メモ.md",
+      "bytes": 493,
+      "sha256": "382c089f5c75382378968e8b2110d0932608c7abbc019c33f22705b21cf701bc"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 574,
+      "sha256": "1751c3828d511dd379265b61ffe138cb547803524cfc2e95bc7e36809f20855e"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 265,
+      "sha256": "61007e608498f25101c900e150fe5a97e073958a5a153487143ea81eb3e05bbf"
+    }
+  ]
+}

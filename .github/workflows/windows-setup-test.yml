@@ -2,6 +2,11 @@ name: Windows setup download tests
 
 on:
   workflow_dispatch:
+    inputs:
+      live_download:
+        description: 'Test the immutable public ZIP URL instead of the runner-only local server'
+        type: boolean
+        default: false
   push:
     paths:
       - '.github/workflows/windows-setup-test.yml'
@@ -12,6 +17,9 @@ on:
       - 'docs/downloads/AI-NORIKO-Windows-Setup.cmd'
       - 'docs/downloads/AI-NORIKO-Starter-Kit.zip'
       - 'docs/downloads/manifest.json'
+      - 'docs/downloads/kit-files.json'
+      - 'docs/downloads/release.json'
+      - 'docs/downloads/releases/**'
 
 permissions:
   contents: read
@@ -23,6 +31,12 @@ jobs:
     steps:
       - name: Check out the reviewed downloads
         uses: actions/checkout@v4
-      - name: Parse, validate extraction, and run the real downloader twice
+      - name: Set up the reviewed Node.js major version
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate downloads and run the Windows kit checks
         shell: powershell
-        run: ./scripts/test-windows-setup.ps1
+        env:
+          AI_NORIKO_TEST_LIVE_DOWNLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.live_download && '1' || '0' }}
+        run: ./scripts/test-windows-setup.ps1 -LiveDownload:($env:AI_NORIKO_TEST_LIVE_DOWNLOAD -eq '1')
