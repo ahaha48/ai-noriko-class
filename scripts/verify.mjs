@@ -21,6 +21,8 @@ try {
     page.on('pageerror', error => errors.push(error.message));
     assert.equal((await page.goto(base)).status(), 200);
     assert.equal(await page.locator('.resource-prompt').count(), 21);
+    assert.equal(await page.locator('#windows-setup').count(), 1);
+    assert.equal(await page.locator('#windows-setup a[href$="AI-NORIKO-Windows-Setup.cmd"]').count(), 1);
     assert.equal(await page.locator('#P01').getAttribute('open'), '');
     for (const prompt of expected) assert.equal(await page.locator(`#${prompt.id} pre code`).textContent(), prompt.text);
     assert.ok(await page.locator('.resource-index a').first().isVisible(), 'Mobile navigation must remain visible');
@@ -53,5 +55,5 @@ try {
     await context.close();
     console.log(`${width}px: prompts, navigation, clipboard and layout PASS`);
   }
-  console.log('All 9 downloads match verified files; compatibility route and copy fallback PASS');
+  console.log(`All ${manifest.assets.length} downloads match verified files; compatibility route and copy fallback PASS`);
 } finally { await browser.close(); }

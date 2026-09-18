@@ -262,3 +262,6 @@ footer { min-height: 150px; width: min(1180px, calc(100% - 48px)); margin: 0 aut
   .resource-rule { align-items: flex-start; flex-direction: column; }
   .success-line, .cost-guide { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; gap: 10px; }
 }
+
+#windows-setup .button.secondary { color: #08313b; border-color: #78949a; background: transparent; }
+#windows-setup .button:focus-visible { outline: 3px solid #007b8c; outline-offset: 4px; }

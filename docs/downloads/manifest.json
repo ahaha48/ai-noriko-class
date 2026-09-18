@@ -54,6 +54,18 @@
       "path": "downloads/guide/docs/SERVICE_DESIGN.md",
       "bytes": 5888,
       "sha256": "9a463b340f9e0ceb8d424047feec40ecc558402e9b6116218c5566ea1c5f846a"
+    },
+    {
+      "name": "AI-NORIKO-Windows-Setup.cmd",
+      "path": "downloads/AI-NORIKO-Windows-Setup.cmd",
+      "bytes": 8249,
+      "sha256": "96ed372098a5aab7c573ac2b4db036c4c87402c92cf7869258c86fc7b41bf393"
+    },
+    {
+      "name": "AI-NORIKO-Windows-Help.md",
+      "path": "downloads/AI-NORIKO-Windows-Help.md",
+      "bytes": 1506,
+      "sha256": "ee075c311d1e6f78f0d1839c78c6c62c26365f358387a9d3ed6dc20ffce23c49"
     }
   ]
 }

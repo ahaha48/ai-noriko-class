@@ -1,0 +1,28 @@
+name: Windows setup download tests
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/windows-setup-test.yml'
+      - 'scripts/windows-*'
+      - 'scripts/test-windows-setup.ps1'
+      - 'scripts/export.mjs'
+      - 'scripts/verify.mjs'
+      - 'docs/downloads/AI-NORIKO-Windows-Setup.cmd'
+      - 'docs/downloads/AI-NORIKO-Starter-Kit.zip'
+      - 'docs/downloads/manifest.json'
+
+permissions:
+  contents: read
+
+jobs:
+  windows-powershell-51:
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - name: Check out the reviewed downloads
+        uses: actions/checkout@v4
+      - name: Parse, validate extraction, and run the real downloader twice
+        shell: powershell
+        run: ./scripts/test-windows-setup.ps1

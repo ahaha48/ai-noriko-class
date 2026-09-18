@@ -6,8 +6,12 @@ GitHub Pagesの公開元は `main` ブランチの `/docs`。生徒用ページ�
 
 公開用として確認した教材のみを含みます。思考パック本体、個人のObsidian、認証情報、音声IDは含みません。教材の掲載は、再配布や商用利用の新たな許諾を与えるものではありません。
 
+Windows向けに、ZIPのダウンロード・SHA-256照合・安全な新規フォルダへの展開だけを行う `AI-NORIKO-Windows-Setup.cmd` を配布します。アプリや追加ソフトは起動・導入せず、既存ファイルは上書きしません。OSの保護や実行ポリシーは変更しません。ブラウザや管理設定で実行が止まるPCは手動ZIPまたは講師の案内を使います。
+
 ## 更新する方へ
 
 講義の元プロジェクトとLearning-Guideを同じ親フォルダに置き、元プロジェクトの依存を準備した状態で `node scripts/export.mjs` を実行します。出力先は `docs` です。既存のSitesサイトや個人アプリは変更しません。
 
 公開前にコピー操作・教材リンク・スマホ表示と、公開対象に秘密情報がないことを確認してください。実アカウントの接続や個人情報は公開用フォルダへ入れません。
+
+Windows補助ファイルは `scripts/windows-setup.cmd.in` から生成します。export時にキットZIPのSHA-256を埋め込むため、ZIP更新時は補助ファイルも必ず再生成します。Windowsの自動テストは `.github/workflows/windows-setup-test.yml`、ページの確認は `scripts/verify.mjs`。自動テストでは `AI_NORIKO_SETUP_NONINTERACTIVE=1` で最後のExplorer表示と一時停止だけを省略し、取得・照合・展開処理は同じものを使います。

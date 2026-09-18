@@ -20,7 +20,7 @@ const compiled = ts.transpileModule(text, {
 }).outputText;
 const module = { exports: {} };
 vm.runInNewContext(compiled, { module, exports: module.exports, require: createRequire(pagePath) }, { filename: 'resources-page.cjs' });
-const markup = renderToStaticMarkup(React.createElement(module.exports.default));
+let markup = renderToStaticMarkup(React.createElement(module.exports.default));
 
 const documentMap = {
   'AI-NORIKO-Course-Guide.md': 'COURSE_GUIDE.md',
@@ -55,9 +55,29 @@ async function copyGuide(directory, relative = '') {
 }
 await copyGuide(guide);
 
+// The Windows helper is outside the ZIP so a student need not extract it first.
+const starter = manifest.find(asset => asset.name === 'AI-NORIKO-Starter-Kit.zip');
+const helperTemplate = await fs.readFile(path.join(root, 'scripts/windows-setup.cmd.in'), 'utf8');
+if ((helperTemplate.match(/__STARTER_KIT_SHA256__/g) || []).length !== 1) throw new Error('Expected one pinned ZIP hash');
+const helper = helperTemplate.replace('__STARTER_KIT_SHA256__', starter.sha256).replace(/\r?\n/g, '\r\n');
+const help = await fs.readFile(path.join(root, 'scripts/windows-download-help.md'), 'utf8');
+for (const [name, content] of [['AI-NORIKO-Windows-Setup.cmd', helper], ['AI-NORIKO-Windows-Help.md', help]]) {
+  const bytes = Buffer.from(content, 'utf8');
+  const target = `downloads/${name}`;
+  await fs.writeFile(path.join(output, target), bytes);
+  manifest.push({ name, path: target, bytes: bytes.length, sha256: crypto.createHash('sha256').update(bytes).digest('hex') });
+}
+const panel = await fs.readFile(path.join(root, 'scripts/windows-panel.html'), 'utf8');
+const setupMarker = '<section class="resource-section" id="setup">';
+if (!markup.includes(setupMarker)) throw new Error('Setup section moved; review Windows panel placement');
+markup = markup.replace(setupMarker, panel + setupMarker)
+  .replace('<a href="#setup">共通導入</a>', '<a href="#windows-setup">Windows展開</a><a href="#setup">共通導入</a>')
+  .replace('<div class="download-grid">', '<div class="download-grid"><a class="download-card featured" href="#windows-setup"><small>Windows 10・11 / ZIP展開が難しい方へ</small><strong>ダブルクリックでキットを準備</strong><p>補助ファイルがZIPのダウンロードと展開を行います。展開後の本体フォルダをCodexで開きます。</p><span>Windows向けの手順へ →</span></a>');
+
 let css = await fs.readFile(path.join(source, 'app/globals.css'), 'utf8');
 css = css.replace('@import "tailwindcss";', '')
   .replaceAll('nav a:not(.nav-cta)', '.site-header nav a:not(.nav-cta)');
+css += '\n#windows-setup .button.secondary { color: #08313b; border-color: #78949a; background: transparent; }\n#windows-setup .button:focus-visible { outline: 3px solid #007b8c; outline-offset: 4px; }\n';
 const reset = `:root { --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo; --font-display: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo; }\nhtml { line-height: 1.5; -webkit-text-size-adjust: 100%; } button, input { font: inherit; } button { cursor: pointer; } button:disabled { cursor: wait; } summary { display: list-item; } img { max-width: 100%; }\n`;
 await fs.writeFile(path.join(output, 'styles.css'), reset + css);
 await fs.copyFile(path.join(root, 'scripts/client.js'), path.join(output, 'script.js'));
@@ -75,4 +95,4 @@ await fs.mkdir(path.join(output, 'resources'), { recursive: true });
 await fs.writeFile(path.join(output, 'resources/index.html'), html('../'));
 await fs.writeFile(path.join(output, '.nojekyll'), '');
 await fs.writeFile(path.join(output, 'downloads/manifest.json'), JSON.stringify({ version: '2026-09-19', assets: manifest }, null, 2) + '\n');
-console.log(`Exported student page, 21 prompts, ${manifest.length} downloads, and the reviewed guide documents.`);
+console.log(`Exported student page, 21 prompts, ${manifest.length} downloads including the pinned Windows helper, and the reviewed guide documents.`);
