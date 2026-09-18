@@ -27,7 +27,7 @@ $profilePath = [Environment]::GetFolderPath('UserProfile')
 Assert-True (Test-Path -LiteralPath $profilePath -PathType Container) 'The runner user profile is unavailable.'
 $utf8 = New-Object System.Text.UTF8Encoding($false, $true)
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-$nodeCommand = (Get-Command node.exe -CommandType Application -ErrorAction Stop).Source
+$nodeCommand = (Get-Command node.exe -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source
 Assert-True ((& $nodeCommand --version) -match '^v24\.') 'Node.js 24 is required for the reviewed kit checks.'
 $inventory = [IO.File]::ReadAllText($inventoryPath, $utf8) | ConvertFrom-Json
 $release = [IO.File]::ReadAllText($releasePath, $utf8) | ConvertFrom-Json
@@ -274,7 +274,7 @@ server.listen(0, '127.0.0.1', () => fs.writeFileSync(ready, String(server.addres
     }
 
     # Build/test a fresh runner-only extraction. No Electron GUI or account integration is launched.
-    $npmCommand = (Get-Command npm.cmd -CommandType Application -ErrorAction Stop).Source
+    $npmCommand = (Get-Command npm.cmd -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source
     $npmChecks = @(
         @{ Name = 'npm ci'; Arguments = @('ci', '--no-audit', '--no-fund') },
         @{ Name = 'npm test'; Arguments = @('test') },
