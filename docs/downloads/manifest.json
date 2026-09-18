@@ -1,0 +1,59 @@
+{
+  "version": "2026-09-19",
+  "assets": [
+    {
+      "name": "AI-NORIKO-Starter-Kit.zip",
+      "path": "downloads/AI-NORIKO-Starter-Kit.zip",
+      "bytes": 3320991,
+      "sha256": "ecd841e687d43089d612bf3915a5ec59b2007999960720cb07a58da2b54cc048"
+    },
+    {
+      "name": "AI-NORIKO-Lecture-Slides.pptx",
+      "path": "downloads/AI-NORIKO-Lecture-Slides.pptx",
+      "bytes": 1856900,
+      "sha256": "2efac7182706d86af99d28742ae83422533837a7b437d593c487e76e545ac901"
+    },
+    {
+      "name": "AI-NORIKO-Learning-Guide.zip",
+      "path": "downloads/AI-NORIKO-Learning-Guide.zip",
+      "bytes": 56776,
+      "sha256": "10f567ebbd238879b4baacc35a1d28aa824c4c5d6f72666d13b092be66cb159e"
+    },
+    {
+      "name": "AI-NORIKO-Copy-Paste-Prompts.txt",
+      "path": "downloads/AI-NORIKO-Copy-Paste-Prompts.txt",
+      "bytes": 21020,
+      "sha256": "8eb5d9e7a8ec391ff9ba0626ef7ae21ddf3c9377e3dfb17e542ee778523f15be"
+    },
+    {
+      "name": "AI-NORIKO-Course-Guide.md",
+      "path": "downloads/guide/docs/COURSE_GUIDE.md",
+      "bytes": 11099,
+      "sha256": "e2f9bb9c2af118a3b1848a34dbb73c3a1da986afd0ca620a5604e7cc6a75e2a2"
+    },
+    {
+      "name": "AI-NORIKO-Knowledge-Setup.md",
+      "path": "downloads/guide/docs/NORIKO_KNOWLEDGE_SETUP.md",
+      "bytes": 11234,
+      "sha256": "5f27331eff61805bf7bf8b56a6a8c15eb02f74b50af4fa08897da1bd082fd64e"
+    },
+    {
+      "name": "AI-NORIKO-Personal-Playbook.md",
+      "path": "downloads/guide/docs/PERSONAL_PLAYBOOK.md",
+      "bytes": 4084,
+      "sha256": "d25746ec2dc7af9354c19d1a15a204e40708e818389adc519a0753d150c48e8b"
+    },
+    {
+      "name": "AI-NORIKO-Team-Playbook.md",
+      "path": "downloads/guide/docs/TEAM_PLAYBOOK.md",
+      "bytes": 5062,
+      "sha256": "c0e9b8c61591314519d36ff4c7c42fc3181758ae4ff3f25e33cfa243ca19068d"
+    },
+    {
+      "name": "AI-NORIKO-Service-Design.md",
+      "path": "downloads/guide/docs/SERVICE_DESIGN.md",
+      "bytes": 5888,
+      "sha256": "9a463b340f9e0ceb8d424047feec40ecc558402e9b6116218c5566ea1c5f846a"
+    }
+  ]
+}
