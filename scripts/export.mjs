@@ -92,6 +92,12 @@ markup = markup.replace(setupMarker, panel + instancesPanel + setupMarker)
   .replace('基本操作、個人秘書、会社の相談役、追加開発、導入支援の考え方を説明します。', '基本操作の9月18日版。複数導入と保存先については、このページのv1.2補足と最新版ガイドを優先してください。')
   .replace('<div class="download-grid">', '<div class="download-grid"><a class="download-card featured" href="#windows-setup"><small>Windows 10・11 / ZIP展開が難しい方へ</small><strong>ダブルクリックでキットを準備</strong><p>補助ファイルがZIPのダウンロードと展開を行います。展開後の本体フォルダをCodexで開きます。</p><span>Windows向けの手順へ →</span></a>');
 
+const appCard = /<a class="download-card featured" href="https:\/\/learn\.chatgpt\.com\/docs\/app"[^>]*>[\s\S]*?<\/a>/g;
+if ([...markup.matchAll(appCard)].length !== 1) throw new Error('Review Codex app card before replacing its guide link');
+markup = markup.replace(appCard, '<a class="download-card featured" href="__CODEX_INSTALL_GUIDE__"><small>はじめての方は、ここから / Mac・Windows別</small><strong>Codexをインストールして開く</strong><p>ダウンロード後の操作、アプリ一覧からの起動、ログインまで。OSをタブで切り替え、図付きの手順で確認できます。</p><span>インストール・起動ガイド →</span></a>')
+  .replace('<a href="#downloads">準備</a>', '<a href="__CODEX_INSTALL_GUIDE__">Codex導入</a><a href="#downloads">準備</a>')
+  .replace('<a class="button primary" href="#downloads">教材を準備する</a>', '<a class="button primary" href="__CODEX_INSTALL_GUIDE__">まずCodexを準備する</a><a class="button secondary" href="#downloads">教材をダウンロード</a>');
+
 let css = await fs.readFile(path.join(source, 'app/globals.css'), 'utf8');
 css = css.replace('@import "tailwindcss";', '')
   .replaceAll('nav a:not(.nav-cta)', '.site-header nav a:not(.nav-cta)');
@@ -99,12 +105,18 @@ css += '\n#windows-setup .button.secondary { color: #08313b; border-color: #7894
 const reset = `:root { --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo; --font-display: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo; }\nhtml { line-height: 1.5; -webkit-text-size-adjust: 100%; } button, input { font: inherit; } button { cursor: pointer; } button:disabled { cursor: wait; } summary { display: list-item; } img { max-width: 100%; }\n`;
 await fs.writeFile(path.join(output, 'styles.css'), reset + css);
 await fs.copyFile(path.join(root, 'scripts/client.js'), path.join(output, 'script.js'));
+const installGuide = path.join(output, 'codex-install');
+await fs.mkdir(installGuide, { recursive: true });
+for (const [from, to] of [['codex-install.html', 'index.html'], ['codex-install.css', 'style.css'], ['codex-install.js', 'script.js']]) {
+  await fs.copyFile(path.join(root, 'scripts', from), path.join(installGuide, to));
+}
 function html(prefix) {
   const body = markup.replace(/href="\/(AI-NORIKO-[^"/]+)"/g, (_, name) => {
     const item = manifest.find(asset => asset.name === name);
     if (!item) throw new Error('Unknown download');
     return `href="${prefix}${item.path}"`;
-  }).replaceAll('href="/"', 'href="#top"').replace('講義案内へ戻る', '教材ページの先頭へ');
+  }).replaceAll('__CODEX_INSTALL_GUIDE__', `${prefix}codex-install/`)
+    .replaceAll('href="/"', 'href="#top"').replace('講義案内へ戻る', '教材ページの先頭へ');
   if (/href="\//.test(body)) throw new Error('Root-relative URL remains');
   return `<!doctype html>\n<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI NORIKO｜生徒用 講義資料・導入ガイド</title><meta name="description" content="AI NORIKOの導入手順、21本のコピペ用プロンプト、スターターキット、講義スライド、NORIKOナレッジ導入ガイド。"><meta name="color-scheme" content="light"><link rel="stylesheet" href="${prefix}styles.css"><script src="${prefix}script.js" defer></script></head><body>${body}</body></html>\n`;
 }

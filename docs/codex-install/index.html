@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codexをインストールして開く｜Mac・Windows別 はじめてガイド</title>
+  <meta name="description" content="AI NORIKO受講前の準備。Mac・Windowsを切り替えて、公式ダウンロード、インストール、アプリ一覧からの起動、ログイン、Codexの選択までを確認できます。">
+  <meta name="color-scheme" content="light">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#os-guide">手順へ進む</a>
+  <header class="page-header">
+    <a href="../" class="brand">AI NORIKO <span>受講前の準備</span></a>
+    <a href="../#downloads">教材ページへ戻る <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <p class="eyebrow">START HERE / パソコン操作から、一緒に。</p>
+        <h1 id="page-title">Codexを、<br><em>「アプリ」で開こう。</em></h1>
+        <p class="hero-lead">ダウンロードした後、どこを押せばいい？<br>自分のパソコンを選んで、1つずつ進めましょう。</p>
+        <p><a class="hero-start" href="#os-guide">Mac／Windowsを選んで始める ↓</a></p>
+        <ol class="journey" aria-label="今回の流れ">
+          <li><span>1</span>ダウンロード</li><li><span>2</span>インストール</li><li><span>3</span>アプリ一覧から開く</li><li><span>4</span>ログイン・Codexを選ぶ</li>
+        </ol>
+        <div class="goal"><span>今日のゴール</span><p>パソコンのアプリ一覧から起動して、<strong>Codexの入力欄が見えている状態。</strong></p></div>
+      </div>
+    </section>
+
+    <div class="content">
+      <aside class="name-note" aria-labelledby="name-note-title">
+        <div class="note-icon" aria-hidden="true">i</div>
+        <div><h2 id="name-note-title">「ChatGPT」と表示されても、入口は合っています。</h2>
+          <p>現在のOpenAI公式案内では、<strong>ChatGPTのデスクトップアプリをインストールし、ログイン後にCodexを選びます。</strong>講義では、この作業画面を「Codex」と呼びます。以前のアプリなどで名前が「Codex」の場合は、その名前で探してください。</p>
+          <p>ブラウザでChatGPTを開いただけでは、アプリのインストールは完了していません。<a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noopener noreferrer">公式の現在の案内 ↗</a></p>
+        </div>
+      </aside>
+
+      <section class="before-start" aria-labelledby="before-title">
+        <h2 id="before-title">始める前に、3つだけ確認</h2>
+        <ul><li>スマホではなく、講義で使う<strong>パソコン</strong>で進めます。</li><li>インターネットと、ご本人のChatGPTアカウントを用意します。</li><li>会社のパソコンは、アプリの導入許可を先に確認します。</li></ul>
+        <p class="small">すでにアプリを開ける方は、再インストールせず「アプリ一覧から開く」の手順へ。利用条件・対応OSは公式ページが優先です。課金やAPIキー作成は、この案内では行いません。</p>
+      </section>
+
+      <section id="os-guide" class="os-guide" aria-labelledby="choose-title">
+        <div class="section-heading"><p class="eyebrow">CHOOSE YOUR COMPUTER</p><h2 id="choose-title">使っているパソコンは、どちらですか？</h2><p>Apple製のパソコンはMac。それ以外でWindowsを使っている方はWindowsを選びます。</p></div>
+        <div class="os-tabs" data-os-tabs aria-label="パソコン別のインストール手順">
+          <button id="tab-mac" type="button" data-os="mac" aria-controls="codex-install-mac"><span class="os-symbol" aria-hidden="true">⌘</span><span>Mac用<small>MacBook・iMacなど</small></span></button>
+          <button id="tab-windows" type="button" data-os="windows" aria-controls="codex-install-windows"><span class="os-symbol windows-symbol" aria-hidden="true">⊞</span><span>Windows用<small>スタートメニューがあるPC</small></span></button>
+        </div>
+        <noscript><p class="notice">JavaScriptが無効のため、Mac・Windowsの両方の手順を続けて表示しています。</p></noscript>
+
+        <section id="codex-install-mac" class="os-panel" data-os-panel="mac" aria-labelledby="mac-heading">
+          <div class="panel-heading"><div><p class="eyebrow">MAC / 6 STEPS</p><h3 id="mac-heading">Macでインストールする</h3></div><a class="download-button" href="https://persistent.oaistatic.com/codex-app-prod/ChatGPT.dmg">Mac用を公式からダウンロード <span aria-hidden="true">↓</span></a></div>
+          <p class="source-note">配布元：OpenAI公式。ダウンロードされるのはインストール用の <code>.dmg</code> ファイルです。<a href="https://learn.chatgpt.com/docs/enterprise/manage-app-updates#deploy-approved-app-versions" target="_blank" rel="noopener noreferrer">公式の配布リンク掲載元 ↗</a></p>
+          <p class="panel-shortcut">すでにインストールできた方は、<a href="#mac-open-app">手順04「アプリケーション一覧から起動」へ ↓</a></p>
+          <ol class="steps">
+            <li><span class="step-number" aria-hidden="true">01</span><div class="step-body"><h4>Mac用のファイルをダウンロード</h4><p>上のボタンを押し、保存が終わるまで待ちます。保存先を選ぶ画面が出たら、まずは「ダウンロード」を選びましょう。</p><p class="done">ここまでできたらOK：ダウンロード完了と表示された。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">02</span><div class="step-body"><h4>Finderの「ダウンロード」から開く</h4><p>画面下のDockにある<strong>顔の形のFinderアイコン</strong>をクリック。左側の「ダウンロード」を選び、今保存した <code>ChatGPT.dmg</code> をダブルクリックします。ファイル名は版によって異なる場合があります。</p><p class="tip">見つからないとき：ブラウザのダウンロード一覧で、保存先を表示します。左側に「ダウンロード」がない場合も、ここから探せます。</p><p class="done">ここまでできたらOK：インストール用のウィンドウが開いた。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">03</span><div class="step-body"><h4>アプリを「Applications」にドラッグ</h4><p>アプリのアイコンと<strong>Applications</strong>フォルダが表示されたら、アプリのアイコンを押したまま、Applicationsの上へ動かして離します。コピーが終わるまで待ってください。</p><figure class="install-diagram"><div class="drag-demo"><div class="app-tile"><span aria-hidden="true">APP</span><strong>ChatGPT</strong><small>アプリのアイコン</small></div><div class="drag-arrow"><strong aria-hidden="true">→</strong><span>押したまま移動</span></div><div class="folder-tile"><span aria-hidden="true">▰</span><strong>Applications</strong><small>アプリケーション</small></div></div><figcaption>操作のイメージです。実際の画面・アイコンとは異なります。</figcaption></figure><p class="tip"><strong>Applications ＝ アプリケーション。</strong>ここに入れることで、次回からアプリ一覧で開けます。DMGを開いただけでは、まだこのコピーが終わっていません。</p><p>違う形式のインストーラーが開いた場合は、その公式画面の案内に従ってください。「置き換え」と出たら、すでに入っている可能性があるので、先に次の手順で確認します。</p><p class="done">ここまでできたらOK：アプリケーションへのコピーが終わった。</p></div></li>
+            <li id="mac-open-app"><span class="step-number" aria-hidden="true">04</span><div class="step-body"><h4>「アプリケーション」一覧から起動</h4><p>Finderの左側にある<strong>「アプリケーション」</strong>をクリック。ChatGPTを探してダブルクリックします。「Codex」という名前で導入済みの場合は、Codexを開いてください。</p><div class="route-strip"><span>Finder</span><b aria-hidden="true">→</b><span>アプリケーション</span><b aria-hidden="true">→</b><strong>ChatGPT／Codex</strong></div><p class="tip">一覧が見つからないとき：Finderを手前にして、画面上部の「移動」→「アプリケーション」。または <kbd>⇧ Shift</kbd> ＋ <kbd>⌘ Command</kbd> ＋ <kbd>A</kbd> です。</p><p>公式から取得したアプリの初回確認が出たら、アプリ名・内容を確認して開きます。「破損」「開発元を検証できない」などで止まる場合は、下の「困ったとき」へ。保護機能は無効にしません。</p><p class="done">ここまでできたらOK：ダウンロード画面ではなく、アプリのウィンドウが開いた。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">05</span><div class="step-body"><h4>自分のアカウントでログインし、Codexを選ぶ</h4><p>アプリのログイン案内から、<strong>普段ChatGPTで使っている方法</strong>（Google・Apple・メールなど）でログインします。ブラウザが開いたらそこで認証し、完了後にアプリへ戻ります。</p><p>ChatGPTの画面が表示された場合は、<strong>ChatGPTの選択メニューから「Codex」</strong>を選び、「新しいチャット」などの入力画面を開きます。すでにCodexが表示されていれば、そのままで大丈夫です。</p><p class="privacy">ログイン中はZoomの画面共有を一時停止。パスワード・確認コードは、講師にも送らないでください。</p><p class="done">ここまでできたらOK：アプリ内でCodexが選ばれ、メッセージ入力欄が見える。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">06</span><div class="step-body"><h4>Dockに残して、次回も迷わず開く</h4><p>起動中のアプリアイコンをDockで右クリック（または <kbd>Control</kbd> を押しながらクリック）。<strong>「オプション」→「Dockに追加」</strong>など、Dockに残す項目を選びます。表示名はOSにより異なります。</p><p>まだ作業を始めていなければ、一度アプリを終了し、Finderの「アプリケーション」かDockから開き直せるか確認しましょう。次回はDMGを開き直す必要はありません。</p><p class="done">ここまでできたらOK：次回の起動場所が分かった。</p></div></li>
+          </ol>
+          <div class="checklist"><h4>Macの準備完了チェック</h4><p data-install-progress aria-live="polite">0 / 4 完了</p><label><input type="checkbox" data-install-check>アプリケーション一覧にアプリがある</label><label><input type="checkbox" data-install-check>一覧またはDockから起動できる</label><label><input type="checkbox" data-install-check>自分のアカウントでログインできた</label><label><input type="checkbox" data-install-check>Codexの入力欄が見える</label><small>自分で確認するためのチェックです。結果は保存・送信しません。</small></div>
+          <a class="next-button" href="../#downloads">できました！ スターターキットの準備へ <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section id="codex-install-windows" class="os-panel" data-os-panel="windows" aria-labelledby="windows-heading">
+          <div class="panel-heading"><div><p class="eyebrow">WINDOWS / 6 STEPS</p><h3 id="windows-heading">Windowsでインストールする</h3></div><a class="download-button" href="https://get.microsoft.com/installer/download/9PLM9XGG6VKS?cid=website_cta_psi">Windows用を公式からダウンロード <span aria-hidden="true">↓</span></a></div>
+          <p class="source-note">OpenAI公式が案内しているMicrosoft配布のインストーラーです。途中でMicrosoft Storeの画面が出る場合があります。<a href="https://learn.chatgpt.com/docs/windows/windows-app#download-the-chatgpt-desktop-app" target="_blank" rel="noopener noreferrer">公式の配布リンク掲載元 ↗</a></p>
+          <p class="panel-shortcut">すでにインストールできた方は、<a href="#windows-open-app">手順04「スタートメニューのアプリ一覧から起動」へ ↓</a></p>
+          <ol class="steps">
+            <li><span class="step-number" aria-hidden="true">01</span><div class="step-body"><h4>Windows用のファイルをダウンロード</h4><p>上のボタンを押して保存を待ちます。これは<strong>Codexを使うための公式アプリ</strong>のインストーラーです。AI NORIKOのZIPや、キット展開用の補助ファイルとは別のものです。</p><p class="done">ここまでできたらOK：公式のインストーラーを保存できた。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">02</span><div class="step-body"><h4>「ダウンロード」フォルダから実行</h4><p>画面下の<strong>フォルダの形のエクスプローラー</strong>をクリックし、左側の「ダウンロード」を開きます。今保存したインストーラーをダブルクリック。ファイル名は時期によって異なるため、今ダウンロードしたものを選んでください。</p><p class="tip">見つからないとき：ブラウザのダウンロード一覧から「フォルダーに表示」などを選びます。エクスプローラーは <kbd>Windows</kbd> ＋ <kbd>E</kbd> でも開けます。</p><p class="done">ここまでできたらOK：アプリのインストール画面が開いた。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">03</span><div class="step-body"><h4>画面の案内に従って、インストールを完了</h4><p>公式アプリであることを確認し、「インストール」などのボタンから進みます。Microsoft Store経由の画面が出た場合も、表示された案内に従い、完了まで待ってください。</p><p class="tip"><strong>管理者の承認が必要になることがあります。</strong>会社のパソコンや管理者パスワードが分からない場合は、ここで止めて管理者に確認します。セキュリティ保護の解除や、制限を回避する操作はしません。</p><p>「開く」「起動」などが表示されたら、インストール完了の目印です。ダウンロードしただけでは、まだ完了ではありません。</p><p class="done">ここまでできたらOK：インストール完了を確認できた。</p></div></li>
+            <li id="windows-open-app"><span class="step-number" aria-hidden="true">04</span><div class="step-body"><h4>スタートメニューのアプリ一覧から起動</h4><p>画面下の<strong>Windowsマーク（スタート）</strong>をクリック。「すべてのアプリ」「すべて」などを開き、ChatGPTを選びます。「Codex」という名前で導入済みの場合は、Codexを選びます。</p><figure class="install-diagram"><div class="search-demo"><div class="search-title"><span aria-hidden="true">⊞</span><strong>見つからないときは、名前で検索</strong></div><div class="search-field">検索： <strong>ChatGPT</strong><span aria-hidden="true">⌕</span></div><div class="search-result"><span class="mini-app" aria-hidden="true">APP</span><div><strong>ChatGPT</strong><small>アプリ</small></div><span>開く →</span></div></div><figcaption>操作のイメージです。実際のスタートメニューとは異なります。</figcaption></figure><p class="tip"><kbd>Windows</kbd> キーを押して「ChatGPT」と入力しても探せます。見つからなければ「Codex」でも検索。検索結果では、Webサイトではなく<strong>「アプリ」</strong>と表示される項目を開きます。</p><p>アプリが自動で開いていても、この場所を確認しておくと、次回迷いません。デスクトップにアイコンがなくても、一覧にあれば大丈夫です。</p><p class="done">ここまでできたらOK：スタートメニューからアプリを起動できた。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">05</span><div class="step-body"><h4>自分のアカウントでログインし、Codexを選ぶ</h4><p>アプリの案内に沿って、<strong>ご本人のChatGPTアカウント</strong>でログインします。ブラウザで認証した場合は、完了後にアプリへ戻ってください。Microsoft Storeのログインと、ChatGPTのログインは別です。</p><p>ChatGPTの画面が表示された場合は、<strong>ChatGPTの選択メニューから「Codex」</strong>を選び、「新しいチャット」などの入力画面を開きます。すでにCodexが表示されていれば、そのままで大丈夫です。</p><p class="privacy">ログイン中はZoomの画面共有を一時停止。パスワード・確認コードは、講師にも送らないでください。</p><p class="done">ここまでできたらOK：アプリ内でCodexが選ばれ、メッセージ入力欄が見える。</p></div></li>
+            <li><span class="step-number" aria-hidden="true">06</span><div class="step-body"><h4>タスクバーに固定して、次回も簡単に開く</h4><p>起動中のアプリアイコンを画面下のタスクバーで右クリックし、<strong>「タスクバーにピン留めする」</strong>を選びます。スタートメニューのアプリを右クリックし、ピン留めできる場合もあります。</p><p>まだ作業を始めていなければ、一度閉じて、スタートメニューやタスクバーから開き直せるか確認しましょう。次回はインストーラーを再実行する必要はありません。</p><p class="done">ここまでできたらOK：次回の起動場所が分かった。</p></div></li>
+          </ol>
+          <div class="checklist"><h4>Windowsの準備完了チェック</h4><p data-install-progress aria-live="polite">0 / 4 完了</p><label><input type="checkbox" data-install-check>インストールが完了している</label><label><input type="checkbox" data-install-check>スタートメニューからアプリを起動できる</label><label><input type="checkbox" data-install-check>自分のアカウントでログインできた</label><label><input type="checkbox" data-install-check>Codexの入力欄が見える</label><small>自分で確認するためのチェックです。結果は保存・送信しません。</small></div>
+          <a class="next-button" href="../#downloads">できました！ スターターキットの準備へ <span aria-hidden="true">→</span></a>
+        </section>
+      </section>
+
+      <section class="troubleshooting" aria-labelledby="trouble-title">
+        <p class="eyebrow">WHEN YOU GET STUCK</p><h2 id="trouble-title">ここで止まったら</h2>
+        <details><summary>ダウンロードしたのに、アプリ一覧にありません。</summary><p>ファイルを保存しただけの可能性があります。Macは手順03の「アプリケーションへコピー」、Windowsは手順03の「インストール完了」まで確認します。「ChatGPT」「Codex」の両方の名前で探してみてください。完了表示があるのに見つからない場合は、むやみに繰り返しインストールせず講師へ相談します。</p></details>
+        <details><summary>ブラウザやログイン画面ばかり開きます。</summary><p>認証にブラウザを使うのは通常の流れです。認証後、MacはDock、Windowsはタスクバーのアプリアイコンに戻ります。「アプリで開く」確認が出たら、公式のログイン操作に続くものか確認して進みます。ログインが完了しない場合は、エラー文を控えて相談してください。</p></details>
+        <details><summary>アプリに入れましたが、Codexが見つかりません。</summary><p>ChatGPTの選択メニューを確認します。公式案内と画面が違う場合は、アプリ名・版・利用アカウント・契約や組織の制限を講師と確認します。アプリの導入とCodexの利用条件は別です。すぐに追加契約やAPIキー作成をする必要はありません。</p></details>
+        <details><summary>「このPCでは使えない」「管理者が必要」「保護されています」と出ます。</summary><p>エラーを読まずに進めないでください。対応OS・端末条件は公式の最新案内を確認します。会社の制限は管理者へ。セキュリティソフトの停止、OSの保護解除、コマンドでの強行インストールはこの講義では行いません。</p></details>
+        <details><summary>Macの画面に、インストール用の白いディスクが残っています。</summary><p>DMGを開くと、インストール用ディスクが表示されることがあります。アプリケーションへのコピーが終わり、そこから起動できることを確認したら、インストール用ウィンドウを閉じてディスクを取り出せます。使用中と出たら強制的に取り出さず、講師へ確認してください。アプリ本体をゴミ箱へ移さないようにしましょう。</p></details>
+        <div class="help-message"><h3>講師に伝えるときは、この3つ</h3><p>① MacかWindowsか　② 何番の手順か　③ 表示されたメッセージ</p><p class="small">スクリーンショットは、メールアドレス・パスワード・認証コードを隠してから送ってください。</p></div>
+      </section>
+
+      <section class="next-section" aria-labelledby="next-title"><div><p class="eyebrow">READY FOR THE CLASS</p><h2 id="next-title">開けたら、準備は一歩前進。</h2><p>次はスターターキットを展開し、今回使う本体フォルダをCodexのプロジェクトに追加します。その後、教材ページの「P01」を貼り付けましょう。</p><p class="small">まだこの段階では、AI NORIKO本体はインストールされていません。Codexの準備とキットの導入は、別の工程です。</p></div><div class="final-actions"><a class="next-button" href="../#downloads">教材ページへ進む →</a><button type="button" class="print-button" data-print-guide hidden>両OSの手順を印刷・PDF保存</button><small>印刷画面で「PDFとして保存」等を選べます。</small></div></section>
+      <footer class="sources"><h2>公式情報と、このガイドについて</h2><p>確認日：2026年9月19日。ボタン・アプリ名・表示位置は更新されることがあります。図は操作を説明する模式図で、実際の画面写真ではありません。インストーラーは当サイトで再配布せず、公式の配布先へリンクしています。</p><ul><li><a href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener noreferrer">OpenAI：デスクトップアプリ</a></li><li><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noopener noreferrer">OpenAI：導入・ログイン・Codexの選択</a></li><li><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noopener noreferrer">OpenAI：Windows版</a></li><li><a href="https://learn.chatgpt.com/docs/enterprise/windows-deployment#let-users-install-and-update-the-app" target="_blank" rel="noopener noreferrer">OpenAI：Windowsインストーラーと承認</a></li><li><a href="https://learn.chatgpt.com/docs/enterprise/manage-app-updates#deploy-approved-app-versions" target="_blank" rel="noopener noreferrer">OpenAI：Mac用インストーラーの配布元</a></li></ul></footer>
+    </div>
+  </main>
+</body>
+</html>

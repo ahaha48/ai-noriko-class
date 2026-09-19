@@ -8,6 +8,14 @@ GitHub Pagesの公開元は `main` ブランチの `/docs`。生徒用ページ�
 
 Windows向けに、ZIPのダウンロード・SHA-256照合・安全な新規フォルダへの展開だけを行う `AI-NORIKO-Windows-Setup.cmd` を配布します。アプリや追加ソフトは起動・導入せず、既存ファイルは上書きしません。OSの保護や実行ポリシーは変更しません。ブラウザや管理設定で実行が止まるPCは手動ZIPまたは講師の案内を使います。
 
+## Codexのインストール・起動ガイド
+
+`/codex-install/` に初心者向けの独立ページがあります。Mac／Windowsタブ、キーボード操作、OS別リンク（`#mac`・`#windows`）、確認チェック、両OSの印刷・PDF保存に対応。JavaScript無効時は両方を表示します。チェック状態や個人情報は保存・送信しません。
+
+編集元は `scripts/codex-install.html`・`.css`・`.js`。`node scripts/export.mjs` で公開先に反映し、`scripts/verify-codex-install.mjs` で検証します。既存教材・ZIPはこのページ追加では変更しません。図は模式図と明示し、実画面のスクリーンショットと区別しています。
+
+2026年9月19日にOpenAIの公式アプリ・Quickstart・Windows配布・更新管理資料を取得して確認。現在の公式表示はChatGPT desktop appであり、ログイン後にCodexを選びます。旧表示のCodexも探せるように案内します。公式インストーラーへのリンクのみを置き、インストーラー自体は再配布しません。利用条件・対応端末・管理者承認は公式表示と本人の環境を優先し、制限回避の操作は案内しません。
+
 ## 更新する方へ
 
 講義の元プロジェクト、AI-NORIKO-Starter-Kit、AI-NORIKO-Learning-Guideを同じ親フォルダに置き、元プロジェクトの依存を準備します。キット本体・資料・プロンプトの検証と同期が済んだら、`python3 scripts/package-downloads.py`、`node scripts/export.mjs` の順に実行します。出力先は `docs` です。既存のSitesサイトや個人アプリは変更しません。
