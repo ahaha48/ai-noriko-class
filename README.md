@@ -18,6 +18,14 @@ Windows向けに、ZIPのダウンロード・SHA-256照合・安全な新規フ
 
 ## 更新する方へ
 
+### PC引き継ぎガイド
+
+`/pc-handover/` に、旧PC・バックアップの有無に応じた手順書を公開しています。Mac／Windows切り替え、Codex用コピー指示文、完了確認、印刷に対応します。単体HTMLは `/downloads/AI-NORIKO-PC-Handover.html` からダウンロードできます。実データ・認証情報は含まず、自動移行機能ではありません。
+
+編集元は `scripts/pc-handover.html`。このガイドだけの更新は `node scripts/export-pc-handover.mjs` で公開用HTMLと教材ページのリンクへ反映します。通常の `node scripts/export.mjs` にも組み込んであり、再出力時にリンクを失いません。スターターキットZIPや配布スライドはこの追加では変更しません。
+
+### 教材全体の更新
+
 講義の元プロジェクト、AI-NORIKO-Starter-Kit、AI-NORIKO-Learning-Guideを同じ親フォルダに置き、元プロジェクトの依存を準備します。キット本体・資料・プロンプトの検証と同期が済んだら、`python3 scripts/package-downloads.py`、`node scripts/export.mjs` の順に実行します。出力先は `docs` です。既存のSitesサイトや個人アプリは変更しません。
 
 キットv1.2.0は実際の本体フォルダのパスから環境IDを作り、ローカル保存先とElectronセッションを環境別に分けます。保存先の説明は `docs/downloads/guide/docs/MULTIPLE_INSTALLS.md` を参照してください。移動・改名後の自動移行や、同じ外部アカウントのデータ分離は行いません。

@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
+import { exportPCHandover } from './export-pc-handover.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const source = path.resolve(root, '../AI-HAYATO-Zoom-LP');
@@ -126,3 +127,4 @@ await fs.writeFile(path.join(output, 'resources/index.html'), html('../'));
 await fs.writeFile(path.join(output, '.nojekyll'), '');
 await fs.writeFile(path.join(output, 'downloads/manifest.json'), JSON.stringify({ version: '2026-09-19', kitVersion: release.version, release: release.starterKit, assets: manifest }, null, 2) + '\n');
 console.log(`Exported student page, 21 prompts, ${manifest.length} downloads including the pinned Windows helper, and the reviewed guide documents.`);
+await exportPCHandover(root);
